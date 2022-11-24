@@ -12,7 +12,7 @@ class bookingService {
         try {
             var messages = message.messages(req.header('language'));
             var timezone = req.header('timezone') ? req.header('timezone') : 'asia/kolkata';
-            // var userId = req.obj.result.userId;
+            console.log(req.body);
             var req_data = req.body;
             if (!req_data.serviceTime || !req_data.bookingDate) {
                 return res.json({ code: codes.badRequest, message: messages.BadRequest });
